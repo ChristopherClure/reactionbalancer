@@ -241,14 +241,14 @@ class ReactionBalancerApp(App):
         result_label = self.query_one("#result-label", Label)
         try:
             balanced, masses = balance(equation)
-            masses_text = "  ".join(
-                f"[yellow]{f}[/yellow] [dim]{m:.2f} g/mol[/dim]"
+            masses_text = "\n".join(
+                f"  [yellow]{f}[/yellow] [dim]{m:.2f} g/mol[/dim]"
                 for f, m in sorted(masses.items())
             )
             result_label.update(
                 f"[bold green]Balanced:[/bold green]\n\n"
                 f"  [cyan]{balanced}[/cyan]\n\n"
-                f"[bold]Molar masses:[/bold]  {masses_text}"
+                f"[bold]Molar masses:[/bold]\n{masses_text}"
             )
             self._add_history(equation, balanced)
         except Exception as e:
