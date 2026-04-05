@@ -2,6 +2,8 @@
 
 A terminal UI for balancing chemical equations, built with [Textual](https://github.com/Textualize/textual) and [ChemPy](https://github.com/bjodah/chempy).
 
+<img src="assets/screenshot.png" alt="Alt text" width="600">
+
 ## Features
 
 - Balances chemical equations using stoichiometry
