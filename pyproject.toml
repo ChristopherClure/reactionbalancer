@@ -1,18 +1,13 @@
 [project]
 name = "reactionbalancer"
-version = "0.1.0"
+version = "0.1.1"
 description = "TUI for balancing chemical reactions"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = [
-    "chempy>=0.10.1",
-    "textual>=8.2.1",
-]
+dependencies = ["chempy>=0.10.1", "textual>=8.2.1"]
 
 [project.scripts]
 reactionbalancer = "main:main"
 
 [dependency-groups]
-dev = [
-    "pyinstaller>=6.19.0",
-]
+dev = ["pyinstaller>=6.19.0"]
